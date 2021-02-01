@@ -24,7 +24,7 @@ while True:
     height, weight, system = gather_info()
     if system.startswith('i'):
         BMI = calculate_bmi(weight, height, system)
-        print("\n"); 
+        print("\n");
         print(f"Your BMI is {BMI}")
         print("\n");
         break
