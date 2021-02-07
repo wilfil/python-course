@@ -18,7 +18,9 @@ subtotal = 0.0
 for path in receipts:
     with open(path) as f:
         ## https://docs.python.org/3/library/json.html
+        #print(f)
         content = json.load(f)
+        #print(content)
         subtotal += float(content["value"])
     #name = path.split("/")[-1]
     #destination = f"./processed/{name}"
@@ -28,5 +30,6 @@ for path in receipts:
     print(f"moved '{path}' to '{destination}'")
 
 print("Receipt subtotal: $%.2f" % subtotal)
-print(f"TESTE: Receipt subtotal: ${math.ceil(subtotal)}")
-print(f"TESTE: Receipt subtotal: ${math.floor(subtotal)}")
+print(f"TESTE: Receipt subtotal: ${round(subtotal,2)}")
+#print(f"TESTE: Receipt subtotal: ${math.ceil(subtotal)}")
+#print(f"TESTE: Receipt subtotal: ${math.floor(subtotal)}")
