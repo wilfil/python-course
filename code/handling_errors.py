@@ -20,6 +20,8 @@ try:
         #print(len(lines))
         line = lines[line_number-1]
         print(line)
+# Error types in python
+# https://www.tutorialsteacher.com/python/error-types-in-python
 except IndexError:
     if line_number > len(lines):
         print("Number of the line provided is higher that the number of lines on the file")
